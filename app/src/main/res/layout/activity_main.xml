@@ -1,18 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="#E1EA86"
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/text_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pacifico"
+            android:gravity="center"
+            android:text="@string/alarm_clock"
+            android:textColor="#200505"
+            android:textSize="32sp" />
+
+        <EditText
+            android:id="@+id/text_ed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="@string/input_text"
+            android:minHeight="48dp"
+            tools:ignore="TextContrastCheck"
+            android:inputType="number" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp">
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="225dp"
+                android:layout_height="49dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@color/btn_color"
+                android:fontFamily="@font/aladin"
+                android:text="@string/btn_save_text"
+                android:textAllCaps="false"
+                android:textColor="#F9F9FA"
+                app:icon="@android:drawable/ic_lock_idle_alarm" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:layout_gravity="start"
+                android:layout_margin="10dp"
+                android:background="@color/btn_color"
+                android:fontFamily="@font/aladin"
+                android:text="@string/cancel"
+                android:textAllCaps="false"
+                android:textColor="#F9F9FA" />
+        </LinearLayout>
+
+        <TimePicker
+            android:id="@+id/clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            android:headerBackground="@color/teal_700"
+            android:numbersSelectorColor="#88BF47" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:minHeight="48dp"
+            android:text="@string/sel_theme" />
+
+        <CheckBox
+            android:id="@+id/check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remind" />
+
+        <ToggleButton
+            android:id="@+id/btn_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="@string/off"
+            android:textOn="@string/on" />
+
+
+    </LinearLayout>
+</ScrollView>
