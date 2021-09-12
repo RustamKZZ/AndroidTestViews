@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">AndroidTestViews</string>
+    <string name="alarm_clock">Alarm Clock</string>
+    <string name="input_text">00 : 00</string>
+    <string name="btn_save_text">Сохранить</string>
+    <string name="sel_theme">Отключить оповещение</string>
+    <string name="on">Включено</string>
+    <string name="off">Выключено</string>
+    <string name="remind">Напомнить</string>
+    <string name="id">id</string>
+    <string name="user_name">User name</string>
+    <string name="number_phone">Number phone</string>
+    <string name="number_office">Number office</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="cancel">Отмена</string>
 </resources>
