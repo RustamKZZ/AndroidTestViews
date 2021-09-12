@@ -7,7 +7,7 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity implements onClickListener, View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
     EditText textED;
     Button btnSave;
     Button btnCancel;
@@ -21,22 +21,25 @@ public class MainActivity extends AppCompatActivity implements onClickListener, 
         btnSave = findViewById(R.id.btn_save);
         btnCancel = findViewById(R.id.btn_cancel);
 
-        textED.setOnClickListener(this);
-        btnSave.setOnClickListener(this);
-        btnCancel.setOnClickListener(this);
 
-    }
-
-    @Override
-    public void onClick(View view) {
-        if (view.getId() == R.id.btn_save) {
-            textED.setText("Сохранено");
-        } else if (view.getId() == R.id.btn_cancel) {
-            {
-                textED.setText("Отмена");
-
+        View.OnClickListener playButton;
+        playButton = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switch (view.getId()) {
+                    case R.id.btn_save:
+                        textED.setText("Сохранено");
+                        break;
+                    case R.id.btn_cancel:
+                        textED.setText("Отмена");
+                }
             }
-        }
+        };
+        textED.setOnClickListener(playButton);
+        btnSave.setOnClickListener(playButton);
+        btnCancel.setOnClickListener(playButton);
 
     }
+
+
 }
